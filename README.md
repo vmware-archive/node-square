@@ -4,11 +4,13 @@ A sample JavaScript function that multiplies a number by itself, returning the s
 
 ## Deployment
 
-1.  Install riff (these instructions assume riff v0.2.0 or later.)
+1.  Install riff.
 
-    See riff's [Getting Started](https://projectriff.io/docs/getting-started/) guide. Skip if you already have riff running.
+    These instructions assume riff v0.2.0 or later. See riff's [Getting Started](https://projectriff.io/docs/getting-started/) guide. Skip if you already have riff running.
 
-2.  Create the function (this assumes that the default namespace was initialized with credentials for your `DOCKER_ID` on [Docker Hub](https://docs.docker.com/docker-hub/).)
+2.  Create the function.
+
+    This assumes that the default namespace was initialized with credentials for your `DOCKER_ID` on [Docker Hub](https://docs.docker.com/docker-hub/).
 
     ```bash
     riff function create square \
@@ -18,13 +20,13 @@ A sample JavaScript function that multiplies a number by itself, returning the s
     --verbose
     ```
 
-4.  Invoke the function
+4.  Invoke the function.
 
     ```bash
     riff service invoke square --text -- -w '\n' -d 7
     ```
 
-    Will result in:
+    Result:
 
     ```txt
     curl http://localhost:31380/ -H 'Host: square.default.example.com' -H 'Content-Type: text/plain' -w '\n' -d 7
