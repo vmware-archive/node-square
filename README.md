@@ -23,13 +23,13 @@ A sample JavaScript function that multiplies a number by itself, returning the s
 4.  Invoke the function.
 
     ```bash
-    riff service invoke square --text -- -w '\n' -d 7
+    riff service invoke square --json -- -w '\n' -d 7
     ```
 
     Result:
 
     ```txt
-    curl http://localhost:31380/ -H 'Host: square.default.example.com' -H 'Content-Type: text/plain' -w '\n' -d 7
+    curl http://localhost:31380/ -H 'Host: square.default.example.com' -H 'Content-Type: application/json' -w '\n' -d 7
     49
     ```
 
